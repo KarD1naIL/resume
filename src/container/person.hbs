@@ -1,0 +1,109 @@
+<div>
+    {{#with person}}
+
+    <h1>{{name}}</h1>
+    Age:{{age}}
+    <div>
+        Gender:{{gender}}
+    </div>
+    <hr>
+    <h1>Address</h1>
+    {{address.city}}
+    <br>
+    {{address.street}}
+    <br>
+    {{address.state}}
+    <br>
+    {{address.zip}}
+    <br>
+    {{address.country}}
+    <hr>
+
+    <h1>Education</h1>
+    {{#each education}}
+    {{degree}}
+    <br>
+    {{major}}
+    <br>
+    {{university}} - {{graduationYear}}
+    <br>
+
+    {{/each}}
+    <hr>
+
+    <h1>WorkExperionce</h1>
+
+    {{#each workExperience}}
+
+    <strong>{{company}} | {{title}}</strong>
+    <br>
+    From: {{startDate}} - To: {{endDate}}
+    <br>
+    {{responsibilities}}
+    <br>
+    {{year_founded}}
+    <br>
+    {{industry}}
+    <br>
+    <hr>
+
+    {{#each employees}}
+    <h3>Employees</h3>
+    <ul>
+        <li>
+            {{name}}
+            <br>
+            {{position}}
+            <br>
+            {{department}}
+
+            {{#each projects}}
+            <br>
+            <br>
+            <strong>{{name}}</strong>
+            <br>
+            {{description}}
+            <br>
+            {{status}}
+        </li>
+    </ul>
+    {{#each teams}}
+    <strong>{{team_name}}</strong>
+    {{#with team_leader}}
+    <br>
+    {{name}}
+    <br>
+    {{title}}
+    <br>
+    {{email}}
+    {{/with}}
+    <hr>
+    {{#each team_members}}
+    <br>
+    {{name}}
+    <br>
+    {{title}}
+    <br>
+    {{skills}}
+    <br>
+    {{#each projects}}
+    <br>
+    <h3>{{name}}</h3>
+    {{description}}
+    <br>
+    {{technologies}}
+    <br>
+    {{#each team_members}}
+    <br>
+    <strong><em>{{name}}</em></strong>
+    <br>
+    {{title}}
+    {{/each}}
+    {{/each}}
+    {{/each}}
+    {{/each}}
+    {{/each}}
+    {{/each}}
+    {{/each}}
+    {{/with}}
+</div>
