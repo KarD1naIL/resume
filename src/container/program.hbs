@@ -1,0 +1,99 @@
+{{#with program}}
+{{#with excursion}}
+<h1>{{name}}</h1>
+
+{{#with location}}
+{{city}} -- {{country}}
+{{/with}}
+<br>
+{{date}}
+<hr>
+
+{{#each program}}
+{{name}}
+<br>
+{{type}}
+<br>
+{{duration}}
+<hr>
+
+{{#with details}}
+{{#if museum}}
+{{#with museum}}
+{{name}}
+<hr>
+{{#with location}}
+<br>
+{{address}}
+<br>
+{{city}}
+<br>
+{{country}}
+{{/with}}
+<hr>
+{{#each exhibits}}
+<br>
+{{name}}
+<br>
+{{artist}}
+<br>
+{{description}}
+<br>
+{{#if audio_guide}} {{/if}}
+<hr>
+
+{{/each}}
+{{/with}}
+{{/if}}
+
+{{#with guide}}
+{{name}}
+<br>
+{{language}}
+<br>
+{{rating}}
+{{/with}}
+{{/with}}
+
+{{name}}
+<br>
+{{type}}
+<br>
+{{duration}}
+<hr>
+{{#with details}}
+{{#if venue}}
+{{#with venue}}
+
+{{name}}
+
+{{#with location}}
+<br>
+<br>
+{{address}}
+<br>
+{{city}}
+<br>
+{{country}}
+{{/with}}
+{{/with}}
+{{/if}}
+<hr>
+{{#each performers}}
+<strong>{{name}}</strong>
+<br>
+{{type}}
+<br>
+{{/each}}
+<hr>
+{{#with guide}}
+{{name}}
+<br>
+{{language}}
+{{rating}}
+
+{{/with}}
+{{/with}}
+{{/each}}
+{{/with}}
+{{/with}}
