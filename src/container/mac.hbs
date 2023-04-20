@@ -1,0 +1,99 @@
+<div>
+    <h1>{{name}}</h1>
+    <br>
+    {{description}}
+    <br>
+    {{price}}
+    <br>
+    {{category}}
+    <hr>
+    {{#with features}}
+    {{#with processor}}
+    {{brand}}
+    <br>
+    {{model}}
+    <br>
+    {{speed}}
+    <br>
+    {{cores}}
+    <br>
+    {{cache}}
+    <hr>
+    {{/with}}
+    {{#with memory}}
+    {{type}}
+    <br>
+    {{size}}
+    <br>
+    {{speed}}
+    <hr>
+    {{/with}}
+    {{#with storage}}
+    {{type}}
+    <br>
+    {{size}}
+    <hr>
+    {{/with}}
+    {{#with display}}
+    {{size}}
+    <br>
+    {{resolution}}
+    <br>
+    {{technology}}
+    <br>
+    {{color_space}}
+    <br>
+    {{brightness}}
+    <br>
+    {{refresh_rate}}
+    <hr>
+    {{/with}}
+    {{#with graphics}}
+    {{brand}}
+    <br>
+    {{model}}
+    <br>
+    {{memory}}
+    {{/with}}
+    <hr>
+    {{#each ports}}
+    {{type}}
+    <br>
+    {{count}}
+    <hr>
+    <ol>
+        {{#each features}}
+        <li>{{this}}</li>
+        {{/each}}
+    </ol>
+    <hr>
+    {{/each}}
+
+    {{#with battery}}
+    {{type}}
+    <br>
+    {{capacity}}
+    <br>
+    {{life}}
+    <hr>
+    {{/with}}
+    <strong>{{weight}}</strong>
+    <hr>
+    {{#with dimensions}}
+    {{height}}
+    <br>
+    {{width}}
+    <br>
+    {{depth}}
+    <hr>
+    {{/with}}
+    <strong>{{operating_system}}</strong>
+    <hr>
+    {{#each accessories}}
+    <div>{{name}}</div>
+    <br>
+    <div>${{price}}</div>
+    <br>
+    {{/each}}
+    {{/with}}
+</div>
