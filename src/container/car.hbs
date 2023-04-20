@@ -1,0 +1,147 @@
+<div>
+    {{make}}
+    <br>
+    {{model}}
+    <br>
+    {{year}}
+    <br>
+    {{color}}
+    <hr>
+    {{#with features}}
+    {{#with interior}}
+    {{#with seats}}
+    {{material}}
+    <br>
+    {{color}}
+    <br>
+    {{heated}}
+    <br>
+    {{ventilated}}
+    <hr>
+    {{/with}}
+    {{#with dashboard}}
+    {{material}}
+    <br>
+    {{color}}
+    {{#with display}}
+    <br>
+    {{type}}
+    <br>
+    {{size}}
+    <br>
+    {{resolution}}
+    <br>
+    {{#if touchscreen}} <button>yep</button>{{/if}}
+    <hr>
+    {{/with}}
+    {{/with}}
+    {{#with audio}}
+    {{system}}
+    <br>
+    {{speakers}}
+    <br>
+    {{#if subwoofer}}<button>yep</button> {{/if}}
+    <br>
+    <br>
+    {{#if bluetooth}}<button>yep</button> {{/if}}
+    <br>
+    <br>
+    {{#if USB}} <button>yep</button>{{/if}}
+    <hr>
+    {{/with}}
+    {{/with}}
+    {{#with exterior}}
+    {{#with wheels}}
+    {{size}}
+    <br>
+    {{type}}
+    <br>
+    {{color}}
+    <hr>
+    {{/with}}
+    {{#with headlights}}
+    {{type}}
+    <br>
+    {{brightness}}
+    <br>
+    {{automatic}}
+    <hr>
+    {{/with}}
+    {{#with sunroof}}
+    {{type}}
+    <br>
+    {{size}}
+    <br>
+    {{#if automatic}} <strong>yes</strong>{{/if}}
+    <hr>
+    {{/with}}
+    {{/with}}
+    {{#with safety}}
+    {{#with airbags}}
+    {{front}}
+    <br>
+    {{side}}
+    <br>
+    {{knee}}
+    <br>
+    {{rear}}
+    <hr>
+    {{/with}}
+    {{#with assistance}}
+    {{#if blind_spot_monitoring}} <button> ops</button>{{/if}}
+    <br>
+    <br>
+    {{#if rear_cross_traffic_alert}} <button> opss</button>{{/if}}
+    <br>
+    <br>
+    {{#if lane_departure_warning}}<button> opsss</button> {{/if}}
+    <br>
+    <br>
+    {{#if adaptive_cruise_control}} <button> opssss</button>{{/if}}
+    <br>
+    <br>
+    {{#if collision_warning}} <button> opsssss</button>{{/if}}
+    <hr>
+    {{/with}}
+    {{/with}}
+    {{/with}}
+    {{#with engine}}
+    {{type}}
+    <br>
+    {{displacement}}
+    <br>
+    {{horsepower}}
+    <br>
+    {{torque}}
+    <hr>
+    {{#with transmission}}
+    {{type}}
+    <br>
+    {{gears }}
+    <hr>
+    {{/with}}
+    {{/with}}
+    {{#with fuel_economy}}
+    {{city}}
+    <br>
+    {{highway}}
+    <br>
+    {{combined}}
+    <hr>
+    {{/with}}
+    {{#with price}}
+    {{base}}
+    <br>
+    {{destination}}
+    <hr>
+    {{#with options}}
+    {{navigation}}
+    <br>
+    {{moonroof}}
+    <br>
+    {{premium_paint}}
+    <hr>
+    {{/with}}
+    <h3>{{total}}</h3>
+    {{/with}}
+</div>
