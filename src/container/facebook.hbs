@@ -1,112 +1,149 @@
 <h1>{{name}}</h1>
-<hr>
+
+<h2>Users:</h2>
+
 {{#each users}}
-{{id}}
+
+<h3>{{name}}</h3>
+id:{{id}}
 <br>
-{{name}}
+gender:{{gender}}
 <br>
-{{gender}}
-<br>
-{{age}}
-<hr>
+age:{{age}}
+
+<h3>Friends</h3>
 {{#each friends}}
-{{id}}
-<br>
-{{name}}
-<br>
-{{gender}}
-<br>
-{{age}}
-<hr>
+<ul>
+    <li>
+        id:{{id}}
+        <br>
+        name:{{name}}
+        <br>
+        gande:{{gender}}
+        <br>
+        age:{{age}}
+    </li>
+</ul>
+
+<h3>Mutual friends:</h3>
 {{#each mutual_friends}}
-{{id}}
-<br>
-{{name}}
-<br>
-{{gender}}
-<br>
-{{age}}
-<hr>
+<ul>
+    <li>
+        id:{{id}}
+        <br>
+        name:{{name}}
+        <br>
+        gande:{{gender}}
+        <br>
+        age:{{age}}
+    </li>
+</ul>
 {{/each}}
 {{/each}}
+<h3>Groups:</h3>
 {{#each groups}}
-{{id}}
-<br>
-{{name}}
-<br>
-{{description}}
-<hr>
+<ul>
+    <li>
+        id:{{id}}
+        <br>
+        name:{{name}}
+        <br>
+        description:{{description}}
+    </li>
+</ul>
+<h3>Members:</h3>
 {{#each members}}
-{{id}}
-<br>
-{{name}}
-<br>
-{{gender}}
-<br>
-{{age}}
-<hr>
+<ul>
+    <li>
+        id:{{id}}
+        <br>
+        name:{{name}}
+        <br>
+        gande:{{gender}}
+        <br>
+        age:{{age}}
+    </li>
+</ul>
 {{/each}}
 {{/each}}
-{{id}}
-<br>
-{{name}}
-<br>
-{{description}}
 <hr>
-{{id}}
+<h3>{{name}}</h3>
 <br>
-{{name}}
+id:{{id}}
 <br>
-{{gender}}
+name:{{name}}
 <br>
-{{age}}
-<hr>
-{{#each friends}}
-{{id}}
+gande:{{gender}}
 <br>
-{{name}}
-<br>
-{{gender}}
-<br>
-{{age}}
-<hr>
-{{#each mutual_friends}}
-{{id}}
-<br>
-{{name}}
-<br>
-{{gender}}
-<br>
-{{age}}
-<hr>
-{{#each mutual_friends}}
-{{id}}
-<br>
-{{name}}
-<br>
-{{gender}}
-<br>
-{{age}}
-<hr>
-{{/each}}
-{{/each}}
-{{#each groups}}
-{{id}}
-<br>
-{{name}}
-<br>
-{{description}}
-<hr>
-{{#each members}}
-{{id}}
-<br>
-{{name}}
-<br>
-{{gender}}
-<br>
-{{age}}
-<hr>
-{{/each}}
-{{/each}}
-{{/each}}
-{{/each}}
+age:{{age}}
+
+<h>Friends:</h3>
+    {{#each friends}}
+    <ul>
+        <li>
+            id:{{id}}
+            <br>
+            name:{{name}}
+            <br>
+            gande:{{gender}}
+            <br>
+            age:{{age}}
+        </li>
+    </ul>
+    <h3>Mutual friends:</h3>
+    {{#each mutual_friends}}
+    <ul>
+        <il>
+            id:{{id}}
+            <br>
+            name:{{name}}
+            <br>
+            gande:{{gender}}
+            <br>
+            age:{{age}}
+        </il>
+    </ul>
+
+    <h3>Mutual friends:</h3>
+    {{#each mutual_friends}}
+    <ul>
+        <il>
+            id:{{id}}
+            <br>
+            name:{{name}}
+            <br>
+            gande:{{gender}}
+            <br>
+            age:{{age}}
+        </il>
+    </ul>
+    {{/each}}
+    {{/each}}
+    <h3>Groups:</h3>
+    {{#each groups}}
+    <ul>
+        <il>
+            id:{{id}}
+            <br>
+            name:{{name}}
+            <br>
+            description:{{description}}
+        </il>
+    </ul>
+    <h3>Member</h3>
+    {{#each members}}
+    <ul>
+        <li>
+            id:{{id}}
+            <br>
+            name:{{name}}
+            <br>
+            gande:{{gender}}
+            <br>
+            age:{{age}}
+        </li>
+    </ul>
+    {{/each}}
+    {{/each}}
+    {{/each}}
+    {{/each}}
