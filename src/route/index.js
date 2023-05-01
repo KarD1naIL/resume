@@ -1436,5 +1436,45 @@ router.get('/shophome', function (req, res) {
 
 // ================================================================
 
+router.get('/list', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('list', {
+    layout: 'basic',
+    list: [
+      { name: 'First Button' },
+      { name: 'Secondory Button' },
+      { name: 'Error Button' },
+      { name: 'Snbmit Button' },
+    ],
+
+    user: {
+      name: 'Ivan',
+      role: 'Admin',
+      isConfirm: true,
+      age: '32',
+    },
+
+    users: {
+      name: {
+        value: 'Ivan',
+        text: 'Ivanov',
+      },
+      role: {
+        text: 'Admin',
+      },
+      isConfirm: {
+        value: true,
+      },
+      age: {
+        value: '32',
+      },
+    },
+  })
+})
+
+// ================================================================
+
 // Підключаємо роутер до бек-енду
 module.exports = router
