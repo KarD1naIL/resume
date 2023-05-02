@@ -1,18 +1,4 @@
 <main class="p-1">
-    <div class="card mb-3">
-        <div class="col-12">
-            <div class="nav nav-tabs">
-                {{#with navigation}}
-                {{#each links}}
-                {{> shopheader}}
-                {{/each}}
-                <div class="nav-item {{#if @last}} disabled {{/if}}">
-                    <a class="btn btn-disabled">Bank</a>
-                </div>
-                {{/with}}
-            </div>
-        </div>
-    </div>
     <div class="col-12">
         <div class="nav nav-tabs">
             <nav>
@@ -137,16 +123,5 @@
             </div>
         </div>
         <hr>
-        <div class="row">
-            {{#each footer}}
-            <div class="nav col-2">
-                <div>
-                    {{#each this}}
-                    {{> shopfooter}}
-                    {{/each}}
-                </div>
-            </div>
-            {{/each}}
-        </div>
     </div>
 </main>
