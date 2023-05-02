@@ -1,24 +1,5 @@
 <main class="p-1">
     <div class="row">
-        <div class="card mb-3">
-            <div class="col-12">
-                <div class="nav nav-tabs">
-                    {{#with navigation}}
-                    {{#each links}}
-                    {{#if @last}}
-                    <div class="nav-item">
-                        <a href="{{href}}" class="btn btn-disabled"> {{text}} </a>
-                    </div>
-                    {{else}}
-                    <div class="nav-item">
-                        <a href="{{href}}" class="btn btn-link"> {{text}} </a>
-                    </div>
-                    {{/if}}
-                    {{/each}}
-                    {{/with}}
-                </div>
-            </div>
-        </div>
         <div>
             {{> breadcrumb}}
             {{#with newsData}}
@@ -81,22 +62,5 @@
                 </div>
             </div>
             <hr>
-            <div class="row">
-                {{#each footer}}
-                <div class="nav col-2">
-                    <div>
-                        {{#each this}}
-                        <section>
-                            <div>
-                                <a class="nav-link {{#if @last}} disabled {{/if}}"
-                                    href="{{this.link}}">{{this.text}}</a>
-                            </div>
-                        </section>
-                        {{/each}}
-                    </div>
-                </div>
-                {{/each}}
-            </div>
         </div>
-
 </main>
