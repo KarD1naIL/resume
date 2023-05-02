@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-3 mb-2">
+        <div class="card text-bg-dark">
+            <div class="card-body ">
+                <div class="card-header">{{title}}
+                    <span class="badge text-bg-success rounded-pill text-capitalize">{{#if isTop}}
+                        Нова{{/if}}</span>
+                    <span class="badge text-bg-danger rounded-pill text-capitalize">{{#if isNew}}
+                        Топ{{/if}}</span>
+                </div>
+                {{description}}
+            </div>
+        </div>
+    </div>
+</div>
