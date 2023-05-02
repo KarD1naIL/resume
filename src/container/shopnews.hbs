@@ -1,0 +1,102 @@
+<main class="p-1">
+    <div class="row">
+        <div class="card mb-3">
+            <div class="col-12">
+                <div class="nav nav-tabs">
+                    {{#with navigation}}
+                    {{#each links}}
+                    {{#if @last}}
+                    <div class="nav-item">
+                        <a href="{{href}}" class="btn btn-disabled"> {{text}} </a>
+                    </div>
+                    {{else}}
+                    <div class="nav-item">
+                        <a href="{{href}}" class="btn btn-link"> {{text}} </a>
+                    </div>
+                    {{/if}}
+                    {{/each}}
+                    {{/with}}
+                </div>
+            </div>
+        </div>
+        <div>
+            {{> breadcrumb}}
+            {{#with newsData}}
+            <img class="card-img-top" src="https://picsum.photos/400/200">
+            {{#with head}}
+            <div class="display-3 text-center">{{heading}}</div>
+            {{description}}
+            <div class="display-3 text-center">{{heading}}</div>
+            {{description}}
+            {{/with}}
+            <hr>
+            <div class="row">
+                {{#each body}}
+                <div class="col-4 mb-2">
+                    <div class="card text-bg-primary mb-1">
+                        <div class="card-body mb-2">
+                            <div class="card-header">{{title}}</div>
+                            {{text}}
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+            {{/with}}
+            <hr>
+            {{#with newsOtherBlock}}
+            <h2 class="text text-center">{{title}}</h2>
+            <div class="row">
+                {{#each cards}}
+                <div class="col-3 mb-2">
+                    <div class="card text-bg-dark mb-1">
+                        <div class="card-body mb-2">
+                            <div class="card-header">{{title}}
+                                <span class="badge text-bg-success rounded-pill text-capitalize">{{#if isTop}}
+                                    New{{/if}}</span>
+                                <span class="badge text-bg-danger rounded-pill text-capitalize">{{#if idNew}}
+                                    Top{{/if}}</span>
+                            </div>
+                            {{description}}
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+            {{/with}}
+            <hr>
+            <div>
+                <div class="col-12">
+                    <div class="alert alert-success">
+                        {{#with service}}
+                        <h2 class="text text-center">{{title}}</h2>
+                        <p class="text text-center"> {{description}}</p>
+                        {{#each buttons}}
+                        <section class="text text-center">
+                            <a href="{{link}}" class="btn btn-primary center">{{text}}</a>
+                        </section>
+                        {{/each}}
+                        {{/with}}
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                {{#each footer}}
+                <div class="nav col-2">
+                    <div>
+                        {{#each this}}
+                        <section>
+                            <div>
+                                <a class="nav-link {{#if @last}} disabled {{/if}}"
+                                    href="{{this.link}}">{{this.text}}</a>
+                            </div>
+                        </section>
+                        {{/each}}
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+
+</main>
