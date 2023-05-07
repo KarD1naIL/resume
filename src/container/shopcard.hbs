@@ -1,0 +1,31 @@
+<main>
+    {{#with header}}
+    <h1>{{title}}</h1>
+    {{#with button}}
+    <a href="{{href}}" class="btn btn-light ">{{text}}</a>
+    {{/with}}
+    {{/with}}
+    <div class="pt-4">
+        <hr>
+    </div>
+    <div class="m-2">
+        {{#each goodsBlock}}
+        <div class=" row pt-2">
+            <div class="card p-2 ">
+                <div class="col-2">
+                    <img class="card-img-top" src="https://picsum.photos/400/200" alt="Product photo">
+                </div>
+                <div class="col-4">
+                    <h6>{{name}}</h6>
+                    <p>{{description}}</p>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+
+
+
+
+
+</main>
