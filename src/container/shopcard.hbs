@@ -1,0 +1,110 @@
+<main>
+    {{#with header}}
+    <h1>{{title}}</h1>
+    {{#with button}}
+    <a href="{{href}}" class="btn btn-light ">{{text}}</a>
+    {{/with}}
+    {{/with}}
+    <div class="pt-4">
+        <hr>
+    </div>
+
+    {{#each goodsBlock}}
+    <div class=" card mb-2 ms- ">
+        <div class="row p-2 ">
+            <div class="col-2">
+                <img class="card-img-top" src="https://picsum.photos/400/200" alt="Product photo">
+            </div>
+            <div class="col-4">
+                <h6>{{name}}</h6>
+                <p>{{description}}</p>
+            </div>
+            {{#with price}}
+            <div class="col-3">
+                {{title}}
+                {{value}}
+            </div>
+            {{/with}}
+            <div class="col-1">
+                {{amount}}
+            </div>
+            <div class="col-2">
+                {{#each buttons}}
+                <div class="row p-2">
+
+                    <button class="btn {{#if isPrimary}} btn-primary {{/if}} {{#if isDanger}} btn-outline-danger {{/if}}
+                            colgy-4 gx-1">
+                        {{text}}
+                    </button>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    {{/each}}
+    <div class="pt-4">
+        <hr>
+    </div>
+
+    {{#with total}}
+    <h3>{{title}}</h3>
+    <div class="p-2 ">
+        {{amount}}
+        <br>
+        {{delivery}}
+    </div>
+    {{#each buttons}}
+    <div class="row p-2">
+        <div class="col-5">
+            <button href="{{link}}" class="btn {{#if isSuccess  }} btn-success {{/if}} {{#if isOutline}} btn-outline-success {{/if}}
+                            colgy-4 gx-1">
+                {{text}}
+            </button>
+        </div>
+    </div>
+    {{/each}}
+    {{/with}}
+    <div class="pt-4">
+        <hr>
+    </div>
+    {{#with goodsOtherBlock}}
+    <div class="text text-center">
+        <h5>{{title}}</h5>
+    </div>
+    <div class="row">
+        {{#each cards}}
+        <div class="col-4 mb-2 mt-2">
+            <div class="card">
+                <div class="card-body">
+                    <img class="card-img-top" src="https://picsum.photos/400/200" alt="Product photo">
+                    <p>
+                        {{title}}
+                        <span class="badge text-bg-warning rounded-pill text-capitalize">{{#if isHot}}
+                            HOT{{/if}}</span>
+                        <span class="badge text-bg-primary rounded-pill text-capitalize">{{#if isNew}}
+                            New{{/if}}</span>
+                    </p>
+                    <div>{{description}}</div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    {{/with}}
+    <div class="pt-4">
+        <hr>
+    </div>
+    <div class="alert alert-dark">
+        {{#with subscribe}}
+        <h2>{{header}}</h2>
+        <p>{{description}}</p>
+        {{#each buttons}}
+        <section class="p-2">
+            <a href="{{link}}" class="btn btn-primary ">{{text}}</a>
+        </section>
+
+
+        {{/each}}
+        {{/with}}
+    </div>
+</main>
