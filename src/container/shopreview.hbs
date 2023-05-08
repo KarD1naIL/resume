@@ -1,0 +1,144 @@
+<main>
+    <div class="row">
+        <div class="col">
+
+            {{#with formBlock}}
+            <div class="row">
+                <div class="display-6 p-2"> {{header}}</div>
+                {{#with rating}}
+                {{title}}:
+                {{value}}
+                {{/with}}
+                {{#with actionBlock}}
+                <div class="nav nav-tabs  mt-4">
+                    {{#each tabs}}
+                    <ul class="nav-item">
+                        <li href="#" class="nav-link {{#if isActive}}active{{/if}}">
+                            {{text}}</li>
+                    </ul>
+                    {{/each}}
+                </div>
+
+
+                <div class="card  p-3 mt-5 mb-5">
+                    {{#with report}}
+                    {{title}}
+                    {{#with button}}
+                    <div class="col-4"> <a href="{{link}}" class="btn btn-dark ">{{text}}</a>
+                    </div>
+                    {{/with}}
+                </div>
+                {{/with}}
+
+            </div>
+            <hr>
+
+            {{/with}}
+            {{#with feedbackBlock}}
+            <div class="row">
+
+                <div class=" pb-4">
+                    <h3>{{title}}</h3>
+                    {{#each buttons}}
+                    {{#if isWarning}}<div href="{{link}}" class="btn btn-warning">{{text}}</div> {{/if}}
+                    {{#if isSuccess}}<div href="{{link}}" class="btn btn-success">{{text}}</div> {{/if}}
+                    {{#if isDanger}}<div href="{{link}}" class="btn btn-danger">{{text}} </div>{{/if}}
+                    {{/each}}
+                </div>
+
+
+            </div>
+            <hr>
+        </div>
+        {{/with}}
+        <div class="col-4">
+            <div class="card p-4 mb-3">
+                {{#with goodsInfo}}
+                <img class="card-img-top" src="https://picsum.photos/400/200" alt="Product photo">
+                {{name}}
+            </div>
+            <div class="card p-2 py-2">
+                {{price}}
+                {{#if inMarket}} Є в наявності {{/if}}
+                {{#each buttons}}
+                <div class="col-4 pt-2">
+                    <button href="{{link}}"
+                        class="btn {{#if isPrimary  }} btn-primary {{/if}} {{#if isSecondary}} btn-dark {{/if}} pb-3">
+                        {{text}}
+                    </button>
+                </div>
+                {{/each}}
+            </div>
+            <div class="card p-2 mt-2">
+                {{#with seller}}
+                {{title}}:{{value}}
+                {{/with}}
+            </div>
+            {{/with}}
+            {{/with}}
+        </div>
+        <div>
+            {{#each reviewList}}
+            <div class="card mb-2">
+                <div class="card-body ">
+                    <div class="card p-2">
+                        {{#with title}}
+                        {{userName}}
+                        <p>{{caption}}</p>
+                        {{date}}
+                        {{/with}}
+                        {{#with reviewBody}}
+                        {{#with seller}}
+                        <hr>
+                        {{title}}
+                        {{value}}
+                        {{/with}}
+                        {{#with rating}}
+                        <a>{{title}} : {{value}}</a>
+                        {{/with}}
+                        {{#each text}}
+                        <p>{{this}}</p>
+                        {{/each}}
+                        {{#with advantages}}
+                        <b>{{title}} </b>
+                        <p>{{text}}</p>
+                        {{/with}}
+                        {{#with disadvantages}}
+                        <b>{{title}} </b>
+                        <p>{{text}}</p>
+                        {{/with}}
+                        <div class="row">
+                            {{#each images}}
+                            <div class="col-2 pt-2 pb-2">
+                                <img class="card-img-top" src='https://picsum.photos/110/100' alt="Product photo">
+                            </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                    {{#each coments}}
+                    <div class="card m-2 p-2 pb-2">
+                        <i>{{userName}}</i>
+                        {{date}}
+                        <p></p>{{text}}</p>
+                    </div>
+                    {{/each}}
+                    {{/with}}
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="alert alert-success">
+            {{#with service}}
+            <h2 class="text text-center">{{title}}</h2>
+            <p class="text text-center"> {{description}}</p>
+            {{#each buttons}}
+            <section class="text text-center">
+                <a href="{{link}}" class="btn btn-primary center">{{text}}</a>
+            </section>
+            {{/each}}
+            {{/with}}
+        </div>
+    </div>
+</main>
