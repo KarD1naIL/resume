@@ -1,109 +1,127 @@
 <div class="p-5">
-    <h1> <span class="badge bg-secondary">{{name}}</span></h1>
-    <br>
-    <b>description:</b> {{description}}
-    <br>
-    <b>price:</b> {{price}}
-    <br>
-    <b>category:</b> {{category}}
-    <hr>
+
+    <div class="display-5 mb-3 text-center">{{name}}</div>
+    <div class="col-12">
+        <div class="alert alert-success">
+            <div class="text text-center mb-1"><b>description:</b> {{description}}</div>
+            <div class="text text-center mb-1"><b>price:</b> {{price}}</div>
+            <div class="text text-center mb-1"><b>category:</b> {{category}}</div>
+        </div>
+    </div>
     {{#with features}}
     {{#with processor}}
-    <h2> <span class="badge bg-secondary">Processor</span></h2>
-    <b>brand:</b> {{brand}}
-    <br>
-    <b>model:</b> {{model}}
-    <br>
-    <b>speed:</b> {{speed}}
-    <br>
-    <b>cores:</b> {{cores}}
-    <br>
-    <b>cache:</b> {{cache}}
-    <hr>
-    {{/with}}
-    {{#with memory}}
-    <h2> <span class="badge bg-secondary">Memory</span></h2>
-    <b>type:</b> {{type}}
-    <br>
-    <b>size:</b> {{size}}
-    <br>
-    <b>speed:</b> {{speed}}
-    <hr>
-    {{/with}}
-    {{#with storage}}
-    <h2> <span class="badge bg-secondary">Storage</span></h2>
-    <b>type:</b> {{type}}
-    <br>
-    <b>size:</b> {{size}}
-    <hr>
-    {{/with}}
-    {{#with display}}
-    <h2> <span class="badge bg-secondary">Display</span></h2>
-    <b>size:</b>{{size}}
-    <br>
-    <b>resolution:</b> {{resolution}}
-    <br>
-    <b>technology:</b> {{technology}}
-    <br>
-    <b>color_space:</b> {{color_space}}
-    <br>
-    <b>brightness:</b> {{brightness}}
-    <br>
-    <b>refresh_rate:</b> {{refresh_rate}}
-    <hr>
-    {{/with}}
-    {{#with graphics}}
-    <h2> <span class="badge bg-secondary">Graphics</span></h2>
-    <b>brand:</b> {{brand}}
-    <br>
-    <b>model:</b> {{model}}
-    <br>
-    <b>memory:</b> {{memory}}
-    {{/with}}
-    <hr>
-    <h2> <span class="badge bg-secondary">Ports</span></h2>
-    {{#each ports}}
-    <b>type:</b> {{type}}
-    <br>
-    <b>count:</b> {{count}}
+    <div class="row">
+        <div class="col-4 mb-2">
+            <div class="card text-bg-primary mb-1 p-2">
+                <div class="card-header"> <u>Processor</u></div>
+                <b>brand:</b> {{brand}}
+                <b>model:</b> {{model}}
+                <b>speed:</b> {{speed}}
+                <b>cores:</b> {{cores}}
+                <b>cache:</b> {{cache}}
+            </div>
+        </div>
 
-    <ol>
-        {{#each features}}
-        <li>{{this}}</li>
-        {{/each}}
-    </ol>
+        {{/with}}
+        {{#with memory}}
+        <div class="col-4 mb-2">
+            <div class="card text-bg-primary mb-1 p-2">
+                <div class="card-header">Memory</div>
+                <b>type:</b> {{type}}
+                <b>size:</b> {{size}}
+                <b>speed:</b> {{speed}}
+            </div>
+        </div>
+        {{/with}}
+        {{#with storage}}
+        <div class="col-4 mb-2">
+            <div class="card text-bg-primary mb-1 p-2">
+                <div class="card-header">Storage</div>
+                <b>type:</b> {{type}}
+                <b>size:</b> {{size}}
+            </div>
+        </div>
+        <hr>
+        {{/with}}
+        {{#with display}}
+        <div class="col-4 mb-2">
+            <div class="card text-bg-primary mb-1 p-2">
+                <div class="card-header">Display</div>
+                <b>size:</b>{{size}}
+                <b>resolution:</b> {{resolution}}
+                <b>technology:</b> {{technology}}
+                <b>color_space:</b> {{color_space}}
+                <b>brightness:</b> {{brightness}}
+                <b>refresh_rate:</b> {{refresh_rate}}
+            </div>
+        </div>
+        {{/with}}
+        {{#with graphics}}
+        <div class="col-4 mb-2">
+            <div class="card text-bg-primary mb-1 p-2">
+                <div class="card-header">Graphics</div>
+                <b>brand:</b> {{brand}}
+                <br>
+                <b>model:</b> {{model}}
+                <br>
+                <b>memory:</b> {{memory}}
+            </div>
+        </div>
 
-    {{/each}}
-    <hr>
-    {{#with battery}}
-    <h2> <span class="badge bg-secondary">Battery</span></h2>
-    <b>type:</b> {{type}}
-    <br>
-    <b>capacity:</b> {{capacity}}
-    <br>
-    <b>life:</b> {{life}}
-    <br>
-    {{/with}}
-    <b>weight:</b> {{weight}}
-    <hr>
-    {{#with dimensions}}
-    <h2> <span class="badge bg-secondary">Dimensions</span></h2>
-    <b>height:</b> {{height}}
-    <br>
-    <b>width:</b> {{width}}
-    <br>
-    <b>depth:</b> {{depth}}
-    <hr>
-    {{/with}}
-    <h2> <span class="badge bg-secondary">Operating system</span></h2>
-    {{operating_system}}
-    <hr>
-    <h2> <span class="badge bg-secondary">Accessories</span></h2>
-    {{#each accessories}}
-    <div><b>name:{{name}}</b></div>
-    <br>
-    <div><b>price:${{price}}</b></div>
-    <br>
-    {{/each}}
-    {{/with}}
+        {{/with}}
+        <div class="col-4 mb-2">
+            <div class="card text-bg-primary mb-1 p-2">
+                <div class="card-header">Ports</div>
+                {{#each ports}}
+                <b>type:</b> {{type}}
+                <br>
+                <b>count:</b> {{count}}
+                {{#each features}}
+                <li>{{this}}</li>
+                {{/each}}
+                {{/each}}
+            </div>
+        </div>
+        <hr>
+        {{#with battery}}
+        <div class="col-4 mb-2">
+            <div class="card text-bg-primary mb-1 p-2">
+                <div class="card-header">Battery</div>
+                <b>type:</b> {{type}}
+                <b>capacity:</b> {{capacity}}
+                <b>life:</b> {{life}}
+                {{/with}}
+                <b>weight:</b> {{weight}}
+            </div>
+        </div>
+        {{#with dimensions}}
+        <div class="col-4 mb-2">
+            <div class="card text-bg-primary mb-1 p-2">
+                <div class="card-header">Dimensions</div>
+                <b>height:</b> {{height}}
+                <b>width:</b> {{width}}
+                <b>depth:</b> {{depth}}
+            </div>
+        </div>
+        {{/with}}
+        <div class="col-4 mb-2">
+            <div class="card text-bg-primary mb-1 p-2">
+                <div class="card-header">Operating system</div>
+                {{operating_system}}
+            </div>
+        </div>
+        <hr>
+        <div class="col-12">
+            <div class="alert alert-success">
+                <h2 class="text text-center"><u>Accessories</u></h2>
+                {{#each accessories}}
+
+                <p class="text text-center">{{name}}</p>
+                <p class="text text-center"><b>price: $</b>{{price}}</p>
+
+                {{/each}}
+                {{/with}}
+            </div>
+        </div>
+    </div>
 </div>

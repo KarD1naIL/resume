@@ -1,87 +1,74 @@
-<div class="p-2">
+<div class="p-3">
     {{#with web}}
+    <div class="display-1 text-center mb-3 ">Web</div>
     {{#each languages}}
-    {{name}}
-    <br>
-    {{version}}
-    <br>
-    {{description}}
+    <div class="display-5 mb-3 ">Language</div>
+    <div class=" mb-1"><b>name:</b>{{name}}</div>
+    <div class=" mb-1"><b>version:</b>{{version}}</div>
+    <div class=" mb-1"><b>description:</b>{{description}}</div>
     <hr>
-    <br>
     {{#each elements}}
-    <br>
-    {{name}}
-    <br>
-    {{description}}
-    <br>
+    <div class="display-5 mb-3 ">Elements</div>
+    <div class=" mb-1"><b>name:</b>{{name}}</div>
+    <div class=" mb-1">{{description}}</div>
     <hr>
     {{#each attributes}}
-    <br>
-    {{name}}
-    <br>
-    {{description}}
+    <div class="display-5 mb-3 ">Attributes</div>
+    <div class=" mb-1"><b>name:</b>{{name}}</div>
+    <div class=" mb-3"><b>description:</b>{{description}}</div>
     {{/each}}
-    <hr>
-    {{name}}
-    <br>
-    {{description}}
+    <div class="display-5 mb-3 ">Attributes</div>
+    <div class=" mb-1"><b>name:</b>{{name}}</div>
+    <div class=" mb-1"><b>description:</b>{{description}}</div>
     <hr>
     {{#each attributes}}
-    {{name}}
-    <br>
-    {{description}}
+    <div class="display-5 mb-3 ">Attributes</div>
+    <div class=" mb-1"><b>name:</b>{{name}}</div>
+    <div class=" mb-1"><b>description:</b>{{description}}</div>
     <hr>
     {{/each}}
     {{/each}}
-    <hr>
-    <br>
-    {{name}}
-    <br>
-    {{version}}
-    <br>
-    {{description}}
-    <hr>
+    <div class="display-5 mb-3 ">Attributes</div>
+    <div class=" mb-1"><b>name:</b>{{name}}</div>
+    <div class=" mb-1"><b>version:</b>{{version}}</div>
+    <div class=" mb-3"><b>description:</b>{{description}}</div>
     {{#each properties}}
-    <br>
-    {{name}}
-    <br>
-    {{description}}
+    <div class="display-5 mb-3 ">Properties</div>
+    <div class=" mb-1"><b>name:</b>{{name}}</div>
+    <div class=" mb-1"><b>description:</b>{{description}}</div>
     <hr>
     {{#each values}}
-    {{value}}
-    <br>
-    {{description}}
+    <div class="display-5 mb-3 ">Values</div>
+    <div class=" mb-1"><b>value:</b>{{value}}</div>
+    <div class=" mb-1"><b>description:</b>{{description}}</div>
     <hr>
     {{/each}}
     {{/each}}
-    {{name}}
-    {{version}}
-    {{description}}
+    <div class=" mb-1"><b>name:</b>{{name}}</div>
+    <div class=" mb-1"><b>version:</b>{{version}}</div>
+    <div class=" mb-1"><b>description:</b>{{description}}</div>
     <hr>
     {{#each functions}}
-    <br>
-    {{name}}
-    <br>
-    {{description}}
+    <div class="display-5 mb-3 ">Functions</div>
+    <div class=" mb-1"><b>name:</b>{{name}}</div>
+    <div class=" mb-1"><b>description:</b>{{description}}</div>
     <hr>
     {{#each parameters}}
-    <br>
-    {{name}}
-    <br>
-    {{type}}
-    <br>
-    {{description}}
-    <hr>
+    <div class="display-5 mb-3 ">Parameters</div>
+    <div class=" mb-1"><b>name:</b>{{name}}</div>
+    <div class=" mb-1"><b>type:</b>{{type}}</div>
+    <div class=" mb-1"><b>description:</b>{{description}}</div>
+
     {{/each}}
     {{/each}}
-    <hr>
-    <br>
-    {{name}}
-    {{description}}
+    <div class="display-5 mb-3 ">Parameters</div>
+    <div class=" mb-1"><b>name:</b>{{name}}</div>
+    <div class=" mb-5"><b>description:</b>{{description}}</div>
     {{#each parameters}}
-    {{name}}
-    {{type}}
-    {{description}}
+    <div class="display-5 mb-3 ">Parameters</div>
+    <div class=" mb-1"><b>name:</b>{{name}}</div>
+    <div class=" mb-1"><b>type:</b>{{type}}</div>
+    <div class=" mb-1"><b>description:</b>{{description}}</div>
     {{/each}}
     {{/each}}
     {{/with}}

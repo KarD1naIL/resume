@@ -1,56 +1,41 @@
-<h1>{{name}}</h1>
-<h2>Users:</h2>
+<div class="display-1 text-center mb-3 "><b>{{name}}</b></div>
+<div class="display-3 mb-3 ">Users:</div>
 <ul>
     {{#each users}}
     <hr>
-    <h3>{{name}}</h3>
-    id:{{id}}
-    <br>
-    gender:{{gender}}
-    <br>
-    age:{{age}}
-    <h3>Friends</h3>
+    <div class="display-6 mb-3 "><u>{{name}}</u></div>
+    <p class=" mb-1"><b>id:</b>{{id}}</p>
+    <p class=" mb-1"><b>gender:</b>{{gender}}</p>
+    <p class=" mb-3"><b>age:</b>{{age}}</p>
+    <div class="display-6 mb-3 ">Friends</div>
     <ul>
         {{#each friends}}
         <li>
-            id:{{id}}
-            <br>
-            name:{{name}}
-            <br>
-            gender:{{gender}}
-            <br>
-            age:{{age}}
+            <p class=" mb-1"><b>id:</b>{{id}}</p>
+            <p class=" mb-1"> <b>name:</b>{{name}}</p>
+            <p class=" mb-1"><b>gender:</b>{{gender}}</p>
+            <p class=" mb-1"><b>age:</b>{{age}}</p>
         </li>
         <ul>
             <ul>
-                <h3>Mutual friends:</h3>
+                <div class="display-6 mb-3 ">Mutual friends:</div>
                 {{#each mutual_friends}}
                 <li>
-                    id:{{id}}
-                    <br>
-                    name:{{name}}
-                    <br>
-                    gender:{{gender}}
-                    <br>
-                    age:{{age}}
+                    <p class=" mb-1"><b>id:</b>{{id}}</p>
+                    <p class=" mb-1"> <b>name:</b>{{name}}</p>
+                    <p class=" mb-1"><b>gender:</b>{{gender}}</p>
+                    <p class=" mb-1"><b>age:</b>{{age}}</p>
                 </li>
-
-
-                <br>
                 {{#if mutual_friends}}
-                <h3>Mutual friends:</h3>
+                <div class="display-6 mb-3 ">Mutual friends:</div>
                 <ul>
                     {{#each mutual_friends}}
                     <li>
-                        id:{{id}}
-                        <br>
-                        name:{{name}}
-                        <br>
-                        gender:{{gender}}
-                        <br>
-                        age:{{age}}
+                        <p class=" mb-1"><b>id:</b>{{id}}</p>
+                        <p class=" mb-1"> <b>name:</b>{{name}}</p>
+                        <p class=" mb-1"><b>gender:</b>{{gender}}</p>
+                        <p class=" mb-3"><b>age:</b>{{age}}</p>
                     </li>
-
                     {{/each}}
                 </ul>
             </ul>
@@ -60,33 +45,22 @@
         {{/each}}
     </ul>
     {{#if groups}}
-    <h3>Groups:</h3>
+    <div class="display-6 mb-3 ">Groups:</div>
     <ul>
         {{#each groups}}
         <li>
-            id:{{id}}
-            <br>
-            name:{{name}}
-            <br>
-            description:{{description}}
-
+            <p class=" mb-1"><b>id:</b>{{id}}</p>
+            <p class=" mb-1"> <b>name:</b>{{name}}</p>
+            <p class=" mb-1"> <b>description:</b>{{description}}</p>
             <ul>
-                <h3>Member</h3>
+                <div class="display-6 mb-3 ">Member</div>
                 {{#each members}}
-
-
                 <li>
-
-                    id:{{id}}
-                    <br>
-                    name:{{name}}
-                    <br>
-                    gender:{{gender}}
-                    <br>
-                    age:{{age}}
-
+                    <p class=" mb-1"><b>id:</b>{{id}}</p>
+                    <p class=" mb-1"> <b>name:</b>{{name}}</p>
+                    <p class=" mb-1"><b>gender:</b>{{gender}}</p>
+                    <p class=" mb-3"><b>age:</b>{{age}}</p>
                 </li>
-                <br>
                 {{/each}}
             </ul>
         </li>
@@ -98,33 +72,25 @@
     {{/each}}
 
     {{#if groups}}
-    <h3>Groups:</h3>
+    <div class="display-6 mb-3 ">Groups</div>
     <ul>
         {{#each groups}}
         <li>
-            id:{{id}}
-            <br>
-            name:{{name}}
-            <br>
-            description:{{description}}
+            <p class=" mb-1"><b>id:</b>{{id}}</p>
+            <p class=" mb-1"> <b>name:</b>{{name}}</p>
+            <p class=" mb-1"> <b>description:</b>{{description}}</p>
         </li>
     </ul>
-    <h3>Member</h3>
+    <div class="display-6 mb-3 ">Member</div>
     {{#each members}}
-
     <ul>
         <li>
-            id:{{id}}
-            <br>
-            name:{{name}}
-            <br>
-            gender:{{gender}}
-            <br>
-            age:{{age}}
+            <p class=" mb-1"><b>id:</b>{{id}}</p>
+            <p class=" mb-1"> <b>name:</b>name:{{name}}</p>
+            <p class=" mb-1"><b>gender:</b>{{gender}}</p>
+            <p class=" mb-3"><b>age:</b>{{age}}</p>
         </li>
-        <br>
     </ul>
-
     {{/each}}
     {{/each}}
     {{/if}}

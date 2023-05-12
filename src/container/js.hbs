@@ -1,62 +1,57 @@
-<div>
-    <h1>{{name}}</h1>
-    <h2>Description</h2>
-    {{description}}
+<div class="p-3">
+    <h1 class="text-center">{{name}}</h1>
+    <div class="display-6  mb-3 ">Description</div>
+    <p class=" mb-1">{{description}}</p>
     <hr>
-    <h2>History</h2>
+    <div class="display-6  mb-3 ">History</div>
+
     {{#with history}}
-    <strong>year:</strong> {{year}}
-    <br>
-    <strong><em>founder:</em></strong> {{founder}}
+    <div class="mb-2">
+        <p class=" mb-1"><b>year:</b>{{year}}</p>
+        <p class=" mb-1"><b>founder:</b> {{founder}}</p>
+    </div>
     {{/with}}
     <hr>
-    <h2>Types</h2>
+    <div class="display-6  mb-3 ">Types</div>
     <ul>
         {{#each types}}
         <li>{{this}}</li>
         {{/each}}
     </ul>
     <hr>
-    <h2>Syntax</h2>
+    <div class="display-6  mb-3 ">Syntax</div>
     {{#with syntax}}
-    <i><u>variables:</u></i> {{variables}}
-    <br>
-    <i><u>functions:</u></i> {{functions}}
-    <br>
-    <i><u>conditionals:</u></i> {{conditionals}}
-    <br>
-    <i><u>loops:</u></i> {{loops}}
-    <br>
-    <i><u>classes:</u></i> {{classes}}
+    <p class=" mb-2"><i><u>variables:</u></i> {{variables}}</p>
+    <p class=" mb-2"><i><u>functions:</u></i> {{functions}}</p>
+    <p class=" mb-2"><i><u>conditionals:</u></i> {{conditionals}}</p>
+    <p class=" mb-2"><i><u>loops:</u></i> {{loops}}</p>
+    <p class=" mb-2"><i><u>classes:</u></i> {{classes}}</p>
     {{/with}}
     <hr>
-    <h2> Features</h2>
+    <div class="display-6  mb-3 ">Features</div>
     <ul>
         {{#each features}}
         <li>{{this}}</li>
         {{/each}}
     </ul>
     <hr>
-    <h2>Libraries</h2>
+    <div class="display-6  mb-3 ">Libraries</div>
     <ul>
         {{#each libraries}}
         <li>{{this}}</li>
         {{/each}}
     </ul>
     <hr>
-    <h2>Tools</h2>
+    <div class="display-6  mb-3 ">Tools</div>
     <ul>
         {{#each tools}}
         <li>{{this}}</li>
         {{/each}}
     </ul>
     <hr>
-    <h2>Community</h2>
+    <div class="display-6  mb-3 ">Community</div>
     {{#each community}}
-    <u>name:</u>{{name}}
-    <br>
-    <u>type:</u>{{type}}
-    <br>
-    <br>
+    <p class=" mb-2"><b>name:</b>{{name}}</p>
+    <p class=" mb-4"><b>type:</b>{{type}}</p>
     {{/each}}
 </div>
